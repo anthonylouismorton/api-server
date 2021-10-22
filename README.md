@@ -15,7 +15,7 @@ pull request: https://github.com/anthonylouismorton/api-server/compare/dev?expan
 actions: https://github.com/anthonylouismorton/api-server/actions
 
 ## Include embedded UML
-![uml](./lab3diagram.png)
+![uml](./day4.png)
 
 ## Talk about your routes
 
