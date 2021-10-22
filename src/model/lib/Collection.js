@@ -4,7 +4,7 @@ class Collection{
   constructor(model) {
     this.model = model;
   }
-  //id = squelize identifier
+
   async read(id, options = {}) {
     try {
       let records = null;

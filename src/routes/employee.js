@@ -4,7 +4,6 @@ const {Employees} = require('../model')
 
 const express = require('express');
 const router = express.Router();
-const validator = require('../middleware/validator.js');
 
 router.get('/employee', async (req, res) => {
   let employeeData = await Employees.findAll();

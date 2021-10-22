@@ -1,41 +1,24 @@
 'use strict';
 
-const { request } = require('express');
-const express = require('express')
+const express = require('express');
 const router = express.Router();
-const {employee2, location2} = require('../model')
+const {Employee, Location} = require('../model')
 
 const Collection = require('../model/lib/Collection.js')
 const modelMap = {
-  employee2,
-  location2,
+  Employee: new Collection(Employee),
+  Location: new Collection(Location),
 }
 
 router.use('/:model', function(req, res, next){
 
-    const model = modelMap(req.params.model);
+    const model = modelMap[req.params.model];
     if(!model) {
       next('no model found')
     }
     //const method = req.method;
     req.model = model;
     next();
-//     switch(method){
-//       case 'GET':
-//         model.read(req.params.id);
-//         break;
-//       case 'POST':
-//         model.create(req.body)
-//         break;
-//       case 'PUT':
-//         model.update(req.params.id, req.body)
-//       case 'DELETE':
-//         model.delete(req.params.id);
-//         break;
-//       default:
-//         next('Model Router Error')
-//     }
-// })
 }),
 
 
