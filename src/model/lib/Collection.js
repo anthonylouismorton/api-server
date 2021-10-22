@@ -9,7 +9,7 @@ class Collection{
     try {
       let records = null;
       if(id){
-        options['where'] = id;
+        options['where'] = {id: id};
         records = await this.model.findOne(options);
       }
       else{
@@ -34,7 +34,7 @@ class Collection{
 
   async update (id, json) {
     try {
-      let record = await this.model.update.findOne({where: {id}})
+      let record = await this.model.findOne({where: {id}})
       let updatedRecord = await record.update(json)
       return updatedRecord;
     }
@@ -46,7 +46,8 @@ class Collection{
   async delete (id) {
     try {
       let deletedRows = await this.model.destroy({where: {id}})
-      return deletedRows;
+      let deleted = 'your entry has been deleted'
+      return deleted;
     }
     catch(e) {
       return e;

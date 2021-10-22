@@ -15,6 +15,6 @@ employeeTable.belongsTo(locationTable, {foreignKey: 'title', targetKey: 'id'})
 
 module.exports = {
   db: sequelizeInstance,
-  employees: employeeTable,
-  locations: locationTable,
+  employee: employeeTable,
+  location: locationTable,
 };

@@ -50,18 +50,19 @@ router.post('/:model', async (req, res, next) => {
   res.send(newRecord);
 })
 
-router.put('/:model/:id', async (req,res) => {
+router.put('/:model/:id', async (req,res, next) => {
+  console.log('in the put')
   const model = req.model;
   const id = req.params.id;
   const json = req.body;
   let updatedRecord = await model.update(id, json)
-  res.send(updatedRecord)
+  res.status(200).send(updatedRecord)
 });
 
-router.delete('/:model/:id', async (req, res) => {
+router.delete('/:model/:id', async (req, res, next) => {
   const model = req.model;
   const id = req.params.id;
-  let deletedRecord = await model.destroy(id);
+  let deletedRecord = await model.delete(id);
   res.status(204).send(deletedRecord)
 });
 
