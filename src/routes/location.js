@@ -4,7 +4,6 @@ const {Locations} = require('../model')
 
 const express = require('express');
 const router = express.Router();
-const validator = require('../middleware/validator.js');
 
 router.get('/location', async (req, res) => {
   let locationData = await Locations.findAll();

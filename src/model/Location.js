@@ -1,6 +1,6 @@
 'use strict'
 
-const Location = (sequelizeInstance, DataTypes) => sequelizeInstance.define(
+const location = (sequelizeInstance, DataTypes) => sequelizeInstance.define(
   'location', {
     city: {
       type: DataTypes.STRING,
@@ -13,4 +13,4 @@ const Location = (sequelizeInstance, DataTypes) => sequelizeInstance.define(
   }
 )
 
-module.exports = Location;
+module.exports = location;
