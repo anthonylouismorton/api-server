@@ -9,10 +9,10 @@ Express, jest, dotenv, supertest, nodemon, pg, sequelize, sequelize-cli, sqlite3
 Testing location / employee route through model. Testing Get, Put, Post, Delete from database
 
 ## Links to application deployment
-location: https://anthonymorton-basic-api-server.herokuapp.com/location
-employee: https://anthonymorton-basic-api-server.herokuapp.com/employee
-pull request: https://github.com/anthonylouismorton/basic-api-server/pull/1
-actions: https://github.com/anthonylouismorton/basic-api-server/actions
+location: https://anthony-morton-api-server.herokuapp.com/location
+employee: https://anthony-morton-api-server.herokuapp.com/employee
+pull request: https://github.com/anthonylouismorton/api-server/compare/dev?expand=1
+actions: https://github.com/anthonylouismorton/api-server/actions
 
 ## Include embedded UML
 ![uml](./lab3diagram.png)
