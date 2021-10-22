@@ -32,7 +32,7 @@ class Collection{
     }
   }
 
-  async update () {
+  async update (id, json) {
     try {
       let record = await this.model.update.findOne({where: {id}})
       let updatedRecord = await record.update(json)

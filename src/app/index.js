@@ -12,9 +12,9 @@ const apiRouter = require('../routes/api.js');
 app.use(express.json());
 app.use(logger);
 
-app.use(locationRoute);
-app.use(employeeRoute);
-//app.use('/api', apiRouter)
+//app.use(locationRoute);
+//app.use(employeeRoute);
+app.use(apiRouter)
 
 app.use(error404);
 app.use(error500);
