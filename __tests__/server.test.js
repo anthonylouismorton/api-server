@@ -1,6 +1,6 @@
 'use strict'
 
-const {db, Locations} = require('../src/model')
+const {db} = require('../src/model')
 const supertest = require('supertest')
 const app = require('../src/app/index.js');
 const request = supertest(app.server);
